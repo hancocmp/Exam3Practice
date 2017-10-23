@@ -45,7 +45,7 @@ def main():
 def run_test_practice_problem3():
     """ Tests the   practice_problem3  function. """
     ####################################################################
-    # TODO: 2. Implement this TEST function.
+    # Done: 2. Implement this TEST function.
     #   It TESTS the  practice_problem3  function defined below.
     #   Include at least ** 2 ** ADDITIONAL tests beyond those we wrote.
     #
@@ -136,7 +136,17 @@ def run_test_practice_problem3():
     ####################################################################
     # Test 15
     actual = practice_problem3(5, 0, 0.5)
-    expected = [0]
+    expected = []
+    print('Test 15 Expected:', expected)
+    print("Test 15 Actual:", actual)
+    print()
+
+    # Test 16
+    actual = practice_problem3(5, 2, 0.5)
+    expected = [6, 7]
+    print('Test 16 Expected:', expected)
+    print("Test 16 Actual:", actual)
+    print()
 
 
 def practice_problem3(start, n, threshold):
@@ -211,7 +221,7 @@ def practice_problem3(start, n, threshold):
       :type threshold: float
     """
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #          Some tests are already written for you (above),
     #          but you are required to write ADDITIONAL tests (above).
     ####################################################################
@@ -219,8 +229,15 @@ def practice_problem3(start, n, threshold):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   < 15 minutes.
     ####################################################################
-
-
+    ans = []
+    count = 0
+    num = start
+    while count < n:
+        if math.cos(num) + math.sin(num) > threshold:
+                ans.append(num)
+                count += 1
+        num += 1
+    return ans
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
