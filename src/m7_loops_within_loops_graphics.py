@@ -141,7 +141,6 @@ def hourglass(window, n, point, radius, color):
             center.x += 2 * radius
 
 
-
 def run_test_many_hourglasses():
     """ Tests the    many_hourglasses    function. """
     print()
